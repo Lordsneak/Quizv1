@@ -33,7 +33,7 @@ class Quizz extends JFrame implements ActionListener{
 	JLabel label  = new JLabel("",SwingConstants.CENTER);
 	static JLabel label1  = new JLabel("");
 	
-	//JPanel panel = new JPanel();
+
 	static JTextArea textChrono = new JTextArea();
 	Font f = new Font("Serif", Font.BOLD, 24);
 
@@ -43,7 +43,7 @@ class Quizz extends JFrame implements ActionListener{
 	
 	Quizz(String s)throws LineUnavailableException, UnsupportedAudioFileException, IOException{
 		super(s);
-		//panel.add(textChrono);
+
 		textChrono.setBounds(250,5,80,30); 
 		textChrono.setFont(f);
 		add(textChrono);
@@ -108,13 +108,13 @@ class Quizz extends JFrame implements ActionListener{
 			try {
 				time = getTime(i);
 			} catch (LineUnavailableException e) {
-				// TODO Auto-generated catch block
+
 				e.printStackTrace();
 			} catch (UnsupportedAudioFileException e) {
-				// TODO Auto-generated catch block
+
 				e.printStackTrace();
 			} catch (IOException e) {
-				// TODO Auto-generated catch block
+
 				e.printStackTrace();
 			}
 			textChrono.setText(time);
@@ -136,7 +136,6 @@ class Quizz extends JFrame implements ActionListener{
 	    int minutes = 0;
 	    int seconds = 0;
 	    
-	    //pour afficher
 	    String strMins; 
 	    String strSecs;
 
@@ -148,7 +147,6 @@ class Quizz extends JFrame implements ActionListener{
 	    	b1.setEnabled(false);
 	    	v1.setEnabled(false);
 	    	playSound("http://codeskulptor-demos.commondatastorage.googleapis.com/GalaxyInvaders/alien_hit.wav");
-	    	//System.exit(0);	
 	    }
 	   if (sec >= 60){
 		   
@@ -206,7 +204,7 @@ class Quizz extends JFrame implements ActionListener{
 				b1.setEnabled(false);
 				
 				label.setText("");
-				label.setText("Bravo!!!!!!!!!!");
+				label.setText("Bravo!");
 				
 			}
 		}
@@ -342,7 +340,7 @@ class Quizz extends JFrame implements ActionListener{
 
 	public static void main(String s[])throws LineUnavailableException, UnsupportedAudioFileException, IOException{
 			
-		new Quizz("Online Test Of Java");
+		new Quizz("Quiz v1");
 		runTimer();
 		
 		
